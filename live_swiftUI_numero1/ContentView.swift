@@ -52,8 +52,8 @@ struct ContentView: View {
                     
                     Spacer()
                 }
-                .padding(20.0)
             }
+            .padding(20.0)
             
             Divider()
             // Pricipe du binding
