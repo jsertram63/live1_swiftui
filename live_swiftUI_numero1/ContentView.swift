@@ -21,23 +21,56 @@ struct ContentView: View {
     //@Binding
     
     var body: some View {
-        VStack{
-            Text("Changement de couleur avec le @Binding")
-                .foregroundColor(textColor)
-                .font(.largeTitle)
-                .multilineTextAlignment(.center)
-        }
-        HStack {
-            SousVue(viewColor: .red, selectedColor: $textColor)
-            SousVue(viewColor: .blue, selectedColor: $textColor)
-            SousVue(viewColor: .yellow, selectedColor: $textColor)
-            SousVue(viewColor: .green, selectedColor: $textColor)
+        VStack(spacing: 50) {
+            // Principe du State
+            VStack {
+                HStack(alignment: .center) {
+                    Spacer()
+                    
+                    Button {
+                        self.imageFill.toggle()
+                    } label: {
+                        Text("Changer d'image")
+                            .padding(10.0)
+                    }
+                    .foregroundColor(Color.white)
+                    .background(.blue)
+                    .cornerRadius(10)
+                    .shadow(radius: 10)
+                    
+                    Spacer()
+                    
+                    Image(systemName: imageFill ? "sun.haze" : "sun.max.fill")
+                        .resizable()
+                        .frame(width: 75.0, height: 75.0)
+                        .scaledToFit()
+                    
+                    Spacer()
+                }
+            }
             
+            Divider()
+            // Pricipe du binding
+            VStack {
+                Text("Changement de couleur avec le @Binding")
+                    .foregroundColor(textColor)
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                
+                HStack {
+                    SousVue(viewColor: .red, selectedColor: $textColor)
+                    SousVue(viewColor: .blue, selectedColor: $textColor)
+                    SousVue(viewColor: .yellow, selectedColor: $textColor)
+                    SousVue(viewColor: .green, selectedColor: $textColor)
+                }
+            }
         }
-            
+        
+        
     }
 }
 
+// Vue additionnelle
 struct SousVue: View {
     var viewColor:Color
     @Binding var selectedColor:Color
@@ -50,9 +83,10 @@ struct SousVue: View {
     }
 }
 
+// Structure d'affichage pour la preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-.previewInterfaceOrientation(.portrait)
+            .previewInterfaceOrientation(.portrait)
     }
 }
