@@ -43,7 +43,6 @@ struct ContentView: View {
                     Image(systemName: imageFill ? "sun.haze" : "sun.max.fill")
                         .resizable()
                         .frame(width: 75.0, height: 75.0)
-                        .scaledToFit()
                     
                     Spacer()
                 }
