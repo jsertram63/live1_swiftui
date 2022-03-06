@@ -21,7 +21,7 @@ struct ContentView: View {
     //@Binding
     
     var body: some View {
-        VStack(spacing: 50) {
+        VStack(spacing: 25.0) {
             // Principe du State
             VStack {
                 HStack(alignment: .center) {
@@ -43,9 +43,11 @@ struct ContentView: View {
                     Image(systemName: imageFill ? "sun.haze" : "sun.max.fill")
                         .resizable()
                         .frame(width: 75.0, height: 75.0)
+                        .foregroundColor(imageFill ? .orange : .yellow)
                     
                     Spacer()
                 }
+                .padding(20.0)
             }
             
             Divider()
@@ -63,9 +65,8 @@ struct ContentView: View {
                     SousVue(viewColor: .green, selectedColor: $textColor)
                 }
             }
+            .padding(20.0)
         }
-        
-        
     }
 }
 
