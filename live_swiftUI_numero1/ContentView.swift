@@ -24,6 +24,11 @@ struct ContentView: View {
         VStack(spacing: 25.0) {
             // Principe du State
             VStack {
+                Text("Changement d'état avec @State")
+                    .foregroundColor(textColor)
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                
                 HStack(alignment: .center) {
                     Spacer()
                     
