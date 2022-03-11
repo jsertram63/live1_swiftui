@@ -11,6 +11,7 @@ struct SousVue: View {
     
     var viewColor : Color
     @Binding var selectedColor:Color
+    
     var body: some View {
             
             Button(action: {
@@ -18,10 +19,9 @@ struct SousVue: View {
             }) {
                 viewColor.frame(width: 50, height: 50, alignment: .center).clipShape(Circle())
             }
-        
-
     }
 }
+
 /*
 struct SousVue_Previews: PreviewProvider {
     static var previews: some View {
