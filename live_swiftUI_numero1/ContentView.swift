@@ -75,21 +75,6 @@ struct ContentView: View {
     }
 }
 
-// Vue additionnelle
-/*
-struct SousVue: View {
-    var viewColor:Color
-    @Binding var selectedColor:Color
-    var body : some View {
-        Button(action: {
-            self.selectedColor = viewColor
-        }) {
-            viewColor.frame(width: 50, height: 50, alignment: .center).clipShape(Circle())
-        }
-    }
-}
-*/
-
 // Structure d'affichage pour la preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

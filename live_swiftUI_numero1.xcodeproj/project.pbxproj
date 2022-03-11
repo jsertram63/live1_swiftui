@@ -55,9 +55,9 @@
 			children = (
 				89BFD72C27D21DEC00359EA0 /* live_swiftUI_numero1App.swift */,
 				89BFD72E27D21DEC00359EA0 /* ContentView.swift */,
+				8911AF9127DB67130059784D /* SousVue.swift */,
 				89BFD73027D21DED00359EA0 /* Assets.xcassets */,
 				89BFD73227D21DED00359EA0 /* Preview Content */,
-				8911AF9127DB67130059784D /* SousVue.swift */,
 			);
 			path = live_swiftUI_numero1;
 			sourceTree = "<group>";
