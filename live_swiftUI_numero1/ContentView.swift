@@ -76,6 +76,7 @@ struct ContentView: View {
 }
 
 // Vue additionnelle
+/*
 struct SousVue: View {
     var viewColor:Color
     @Binding var selectedColor:Color
@@ -87,6 +88,7 @@ struct SousVue: View {
         }
     }
 }
+*/
 
 // Structure d'affichage pour la preview
 struct ContentView_Previews: PreviewProvider {
