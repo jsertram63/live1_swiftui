@@ -22,7 +22,7 @@ struct ContentView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 25.0) {
                 Text("La gestion des états et le passage de données")
-                    .font(.largeTitle)
+                    .font(.title)
                     .fontWeight(.bold)
                 // Variable utilisable uniquement dans la view
                 Text(text)
@@ -32,7 +32,7 @@ struct ContentView: View {
                 // Principe du State
                 VStack(spacing: 25.0) {
                     Text("Changement d'état avec @State")
-                        .font(.title)
+                        .font(.title2)
                     
                     
                     HStack(alignment: .center) {
@@ -66,7 +66,7 @@ struct ContentView: View {
                 VStack(spacing: 25.0) {
                     Text("Changement de couleur avec le @Binding")
                         .foregroundColor(textColor)
-                        .font(.title)
+                        .font(.title2)
                     
                     HStack {
                         Spacer()
@@ -91,6 +91,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewInterfaceOrientation(.portrait)
     }
 }
