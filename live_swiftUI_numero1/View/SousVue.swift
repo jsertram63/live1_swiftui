@@ -19,15 +19,15 @@ struct SousVue: View {
             }) {
                 viewColor.frame(width: 50, height: 50, alignment: .center).clipShape(Circle())
             }
+            .shadow(radius: 5)
     }
 }
 
-/*
 struct SousVue_Previews: PreviewProvider {
+    @State static var viewColor: Color =  Color.red
+    @State static var selectedColor: Color = viewColor
+    
     static var previews: some View {
-        SousVue(viewColor: Color.red, selectedColor: $se)
+        SousVue(viewColor: Color.red, selectedColor: $selectedColor)
     }
-}*/
-
-
-
+}
