@@ -29,10 +29,13 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                 
+                // vue container qui permet d'aligner horizontalement des containers
                 HStack(alignment: .center) {
+                    // Spacer container qui va permettre d'occuper l'espace libre (homogénisation de l'espace)
                     Spacer()
                     
                     Button {
+                        
                         self.imageFill.toggle()
                     } label: {
                         Text("Changer d'image")
@@ -45,8 +48,11 @@ struct ContentView: View {
                     
                     Spacer()
                     
+                    //  container Image affiche une image
+                    // sun.haze ou sun.max.fill : sfsymbol (fourni appel pour travailer)
                     Image(systemName: imageFill ? "sun.haze" : "sun.max.fill")
                         .resizable()
+                        // .frame permet de spécifier la taille de l'image.
                         .frame(width: 75.0, height: 75.0)
                         .foregroundColor(imageFill ? .orange : .yellow)
                     
@@ -57,13 +63,17 @@ struct ContentView: View {
             
             Divider()
             // Pricipe du binding
+            // Vstack (vue container pour empiler les éléments les uns en dessous des autres)
             VStack {
                 Text("Changement de couleur avec le @Binding")
+                    // .modifier instance qui permette de modifier de styliser le text
                     .foregroundColor(textColor)
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
                 
                 HStack {
+                    // liaison avec le boutton choix de couleur
+                    // la liason est symbolisé le $
                     SousVue(viewColor: .red, selectedColor: $textColor)
                     SousVue(viewColor: .blue, selectedColor: $textColor)
                     SousVue(viewColor: .yellow, selectedColor: $textColor)
