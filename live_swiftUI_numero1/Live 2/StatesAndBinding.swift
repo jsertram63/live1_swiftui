@@ -19,11 +19,12 @@ struct StatesAndBinding: View {
         ZStack {
             Color.accentColor.ignoresSafeArea()
             
-            VStack(spacing: 25.0) {
+            VStack(alignment: .center, spacing: 25.0) {
                 VStack(spacing: 25.0) {
                     Text("Gestion des états et le passage de données")
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
                     
                     Text(text)
                 }
@@ -38,7 +39,7 @@ struct StatesAndBinding: View {
                 // Principe du State
                 VStack(spacing: 25.0) {
                     Text("Changement d'état avec @State")
-                        .font(.title2)
+                        .font(.title3)
                         .fontWeight(.medium)
                     
                     // vue container qui permet d'aligner horizontalement des containers
@@ -65,7 +66,7 @@ struct StatesAndBinding: View {
                             .resizable()
                             // .frame permet de spécifier la taille de l'image.
                             .frame(width: 75.0, height: 75.0)
-                            .foregroundColor(imageFill ? .orange : .yellow)
+                            .foregroundColor(imageFill ? .orange : Color("Color1"))
                         
                         Spacer()
                     }
@@ -82,7 +83,7 @@ struct StatesAndBinding: View {
                 VStack(spacing: 25.0) {
                     Text("Changement de couleur avec le @Binding")
                         // .modifier instance qui permette de modifier de styliser le text
-                        .font(.title2)
+                        .font(.title3)
                         .fontWeight(.medium)
                     
                     Text("Cliquez sur les pastilles pour me voir changer de couleur")
