@@ -46,7 +46,7 @@ struct PierricView: View {
                         .fontWeight(.medium)
                 }
                 .padding()
-                .frame(width: /*@START_MENU_TOKEN@*/350.0/*@END_MENU_TOKEN@*/, height: 250.0)
+                .frame(width: 350.0, height: 225.0)
                 .background(.ultraThinMaterial)
                 .cornerRadius(15)
                 .shadow(color: .black.opacity(0.5), radius: 15, x: 0, y: 0)
@@ -67,6 +67,7 @@ struct PierricView: View {
                     .padding(10.0)
                 }
             }
+            .foregroundColor(.white)
             .padding()
         }
     }
