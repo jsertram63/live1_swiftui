@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		377DB58427E4CDC700F35002 /* StatesAndBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DB58327E4CDC700F35002 /* StatesAndBinding.swift */; };
+		377DB58627E4CF6D00F35002 /* PierricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DB58527E4CF6D00F35002 /* PierricView.swift */; };
 		8911AF9227DB67130059784D /* SousVue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8911AF9127DB67130059784D /* SousVue.swift */; };
 		89BFD72D27D21DEC00359EA0 /* live_swiftUI_numero1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFD72C27D21DEC00359EA0 /* live_swiftUI_numero1App.swift */; };
 		89BFD72F27D21DEC00359EA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFD72E27D21DEC00359EA0 /* ContentView.swift */; };
 		89BFD73127D21DED00359EA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BFD73027D21DED00359EA0 /* Assets.xcassets */; };
 		89BFD73427D21DED00359EA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BFD73327D21DED00359EA0 /* Preview Assets.xcassets */; };
-		89F5083727E4A11400AAE627 /* live3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5083627E4A11400AAE627 /* live3View.swift */; };
 		89F5083927E4A4A500AAE627 /* DylanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5083827E4A4A500AAE627 /* DylanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		377DB58327E4CDC700F35002 /* StatesAndBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesAndBinding.swift; sourceTree = "<group>"; };
+		377DB58527E4CF6D00F35002 /* PierricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PierricView.swift; sourceTree = "<group>"; };
 		8911AF9127DB67130059784D /* SousVue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SousVue.swift; sourceTree = "<group>"; };
 		89BFD72927D21DEC00359EA0 /* live_swiftUI_numero1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = live_swiftUI_numero1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BFD72C27D21DEC00359EA0 /* live_swiftUI_numero1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = live_swiftUI_numero1App.swift; sourceTree = "<group>"; };
 		89BFD72E27D21DEC00359EA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89BFD73027D21DED00359EA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89BFD73327D21DED00359EA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		89F5083627E4A11400AAE627 /* live3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = live3View.swift; sourceTree = "<group>"; };
 		89F5083827E4A4A500AAE627 /* DylanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DylanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,8 +51,8 @@
 		377DB58127E4C17700F35002 /* Live 3 */ = {
 			isa = PBXGroup;
 			children = (
-				89F5083627E4A11400AAE627 /* live3View.swift */,
 				89F5083827E4A4A500AAE627 /* DylanView.swift */,
+				377DB58527E4CF6D00F35002 /* PierricView.swift */,
 			);
 			path = "Live 3";
 			sourceTree = "<group>";
@@ -60,8 +60,8 @@
 		377DB58227E4C1A300F35002 /* Live 2 */ = {
 			isa = PBXGroup;
 			children = (
-				8911AF9127DB67130059784D /* SousVue.swift */,
 				377DB58327E4CDC700F35002 /* StatesAndBinding.swift */,
+				8911AF9127DB67130059784D /* SousVue.swift */,
 			);
 			path = "Live 2";
 			sourceTree = "<group>";
@@ -175,10 +175,10 @@
 			files = (
 				89BFD72F27D21DEC00359EA0 /* ContentView.swift in Sources */,
 				377DB58427E4CDC700F35002 /* StatesAndBinding.swift in Sources */,
-				89F5083727E4A11400AAE627 /* live3View.swift in Sources */,
 				89F5083927E4A4A500AAE627 /* DylanView.swift in Sources */,
 				89BFD72D27D21DEC00359EA0 /* live_swiftUI_numero1App.swift in Sources */,
 				8911AF9227DB67130059784D /* SousVue.swift in Sources */,
+				377DB58627E4CF6D00F35002 /* PierricView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
