@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37531CA027E48C4C002FB1E9 /* StatesAndBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37531C9F27E48C4C002FB1E9 /* StatesAndBindingView.swift */; };
 		8911AF9227DB67130059784D /* SousVue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8911AF9127DB67130059784D /* SousVue.swift */; };
 		89BFD72D27D21DEC00359EA0 /* live_swiftUI_numero1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFD72C27D21DEC00359EA0 /* live_swiftUI_numero1App.swift */; };
 		89BFD72F27D21DEC00359EA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BFD72E27D21DEC00359EA0 /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37531C9F27E48C4C002FB1E9 /* StatesAndBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesAndBindingView.swift; sourceTree = "<group>"; };
 		8911AF9127DB67130059784D /* SousVue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SousVue.swift; sourceTree = "<group>"; };
 		89BFD72927D21DEC00359EA0 /* live_swiftUI_numero1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = live_swiftUI_numero1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BFD72C27D21DEC00359EA0 /* live_swiftUI_numero1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = live_swiftUI_numero1App.swift; sourceTree = "<group>"; };
@@ -34,11 +36,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37A39E2F27E335CE00F83684 /* View */ = {
+		37531C9D27E48C06002FB1E9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8911AF9127DB67130059784D /* SousVue.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		37531C9E27E48C1C002FB1E9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				89BFD72E27D21DEC00359EA0 /* ContentView.swift */,
-				8911AF9127DB67130059784D /* SousVue.swift */,
+				37531C9F27E48C4C002FB1E9 /* StatesAndBindingView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		37A39E2F27E335CE00F83684 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37531C9D27E48C06002FB1E9 /* Components */,
+				37531C9E27E48C1C002FB1E9 /* Main */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,6 +169,7 @@
 			files = (
 				89BFD72F27D21DEC00359EA0 /* ContentView.swift in Sources */,
 				89BFD72D27D21DEC00359EA0 /* live_swiftUI_numero1App.swift in Sources */,
+				37531CA027E48C4C002FB1E9 /* StatesAndBindingView.swift in Sources */,
 				8911AF9227DB67130059784D /* SousVue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
