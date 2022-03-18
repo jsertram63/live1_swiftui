@@ -33,12 +33,14 @@ struct ContentView: View {
                     Image(systemName: "link")
                     Text("Live 1-2")
                 }
-            live3View()
+            PierricView()
                 .tabItem {
+                    Image(systemName: "eyedropper.full")
                     Text("Pierric")
                 }
             DylanView()
                 .tabItem {
+                    Image(systemName: "drop.fill")
                     Text("Dylan")
                 }
         }

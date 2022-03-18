@@ -14,11 +14,15 @@ struct SousVue: View {
     
     var body: some View {
             
-            Button(action: {selectedColor = viewColor
+            Button(action: {
+                selectedColor = viewColor
             }) {
                 viewColor.frame(width: 50, height: 50, alignment: .center).clipShape(Circle())
-                    .shadow(radius: 5)
             }
+            .padding(5.0)
+            .background(.ultraThinMaterial)
+            .clipShape(Circle())
+            .shadow(color: .black.opacity(0.5), radius: 5, x: 0, y: 0)
     }
 }
 
