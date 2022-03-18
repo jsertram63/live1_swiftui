@@ -46,10 +46,26 @@ struct PierricView: View {
                         .fontWeight(.medium)
                 }
                 .padding()
-                .frame(width: /*@START_MENU_TOKEN@*/350.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/200.0/*@END_MENU_TOKEN@*/)
+                .frame(width: /*@START_MENU_TOKEN@*/350.0/*@END_MENU_TOKEN@*/, height: 250.0)
                 .background(.ultraThinMaterial)
                 .cornerRadius(15)
                 .shadow(color: .black.opacity(0.5), radius: 15, x: 0, y: 0)
+                .overlay(alignment: .topLeading) {
+                    Button {
+                        CouleurArrierePlan = Color.accentColor
+                        selectedOpacity = 1.0
+                    } label: {
+                        Image(systemName: "arrow.counterclockwise")
+                            .frame(width: 15.0, height: 15.0)
+                            .font(.headline)
+                            .padding(12.0)
+                            .foregroundColor(.primary)
+                            .background(.thickMaterial)
+                            .cornerRadius(15)
+                            .shadow(radius: 5)
+                    }
+                    .padding(10.0)
+                }
             }
             .padding()
         }
