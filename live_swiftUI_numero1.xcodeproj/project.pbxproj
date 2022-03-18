@@ -14,6 +14,7 @@
 		89BFD73427D21DED00359EA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BFD73327D21DED00359EA0 /* Preview Assets.xcassets */; };
 		89F5083527E49E9F00AAE627 /* StateBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5083427E49E9F00AAE627 /* StateBinding.swift */; };
 		89F5083727E4A11400AAE627 /* live3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5083627E4A11400AAE627 /* live3View.swift */; };
+		89F5083927E4A4A500AAE627 /* DylanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F5083827E4A4A500AAE627 /* DylanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		89BFD73327D21DED00359EA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89F5083427E49E9F00AAE627 /* StateBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBinding.swift; sourceTree = "<group>"; };
 		89F5083627E4A11400AAE627 /* live3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = live3View.swift; sourceTree = "<group>"; };
+		89F5083827E4A4A500AAE627 /* DylanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DylanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				89BFD73227D21DED00359EA0 /* Preview Content */,
 				89F5083427E49E9F00AAE627 /* StateBinding.swift */,
 				89F5083627E4A11400AAE627 /* live3View.swift */,
+				89F5083827E4A4A500AAE627 /* DylanView.swift */,
 			);
 			path = live_swiftUI_numero1;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				89BFD72F27D21DEC00359EA0 /* ContentView.swift in Sources */,
 				89F5083727E4A11400AAE627 /* live3View.swift in Sources */,
 				89F5083527E49E9F00AAE627 /* StateBinding.swift in Sources */,
+				89F5083927E4A4A500AAE627 /* DylanView.swift in Sources */,
 				89BFD72D27D21DEC00359EA0 /* live_swiftUI_numero1App.swift in Sources */,
 				8911AF9227DB67130059784D /* SousVue.swift in Sources */,
 			);

@@ -7,9 +7,23 @@
 
 import SwiftUI
 
+
+// ColorPicker
+
 struct live3View: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center) {
+            
+            Image(systemName: "swift")
+                .resizable()
+                .frame(width: 200, height: 200)
+                .scaledToFit()
+                .foregroundColor(.red)
+                .background()
+                
+            
+        }
+        
     }
 }
 

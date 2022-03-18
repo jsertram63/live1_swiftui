@@ -35,8 +35,13 @@ struct ContentView: View {
                 }
             live3View()
                 .tabItem {
-                    Text("Live 3-4")
+                    Text("Pierric")
                 }
+            DylanView()
+                .tabItem {
+                    Text("Dylan")
+                }
+            
             
         }
     }
