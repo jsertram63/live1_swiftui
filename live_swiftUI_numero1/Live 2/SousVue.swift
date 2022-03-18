@@ -14,20 +14,23 @@ struct SousVue: View {
     
     var body: some View {
             
-            Button(action: {
-                self.selectedColor = viewColor
+            Button(action: {selectedColor = viewColor
             }) {
                 viewColor.frame(width: 50, height: 50, alignment: .center).clipShape(Circle())
+                    .shadow(radius: 5)
             }
     }
 }
 
-/*
 struct SousVue_Previews: PreviewProvider {
+ 
+ @State static var viewColor: Color = .red
+ @State static var selectedColor: Color = viewColor
+ 
     static var previews: some View {
-        SousVue(viewColor: Color.red, selectedColor: $se)
+        SousVue(viewColor: viewColor, selectedColor: $selectedColor)
     }
-}*/
+}
 
 
 

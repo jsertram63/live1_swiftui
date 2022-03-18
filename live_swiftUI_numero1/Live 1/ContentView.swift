@@ -23,12 +23,12 @@ struct ContentView: View {
     // initialisation du constructeur
     init() {
         // stylisation de la tabbar
-        UITabBar.appearance().backgroundColor = UIColor.lightGray
+        UITabBar.appearance().backgroundColor = .systemGray6
     }
     
     var body: some View {
         TabView {
-            StateBinding()
+            StatesAndBinding()
                 .tabItem {
                     Image(systemName: "link")
                     Text("Live 1-2")
@@ -41,8 +41,6 @@ struct ContentView: View {
                 .tabItem {
                     Text("Dylan")
                 }
-            
-            
         }
     }
 }

@@ -1,32 +1,40 @@
 //
-//  StateBinding.swift
+//  StatesAndBinding.swift
 //  live_swiftUI_numero1
 //
-//  Created by Lunack on 18/03/2022.
+//  Created by Pierric Marye on 18/03/2022.
 //
 
 import SwiftUI
 
-struct StateBinding: View {
+struct StatesAndBinding: View {
     
     // VAR = LECTURE SIMPLE
     var text = "Je suis une property. On peut uniquement me lire mais pas me modifier"
     // State = LECTURE / ECRITURE
-    @State var textMutable = "Je suis un texte mutable"
     @State var imageFill = true;
     @State var textColor = Color.black
     
-    // le binding
-    //@Binding
-
     var body: some View {
         VStack(spacing: 25.0) {
-            // Principe du State
             VStack {
+                Text("Gestion des états et le passage de données")
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
+            
+            Spacer()
+            
+            Divider()
+                .background(.black)
+            
+            Spacer()
+            
+            // Principe du State
+            VStack(spacing: 25.0) {
                 Text("Changement d'état avec @State")
-                    .foregroundColor(textColor)
-                    .font(.largeTitle)
-                    .multilineTextAlignment(.center)
+                    .font(.title2)
+                    .fontWeight(.medium)
                 
                 // vue container qui permet d'aligner horizontalement des containers
                 HStack(alignment: .center) {
@@ -34,14 +42,13 @@ struct StateBinding: View {
                     Spacer()
                     
                     Button {
-                        
-                        self.imageFill.toggle()
+                        imageFill.toggle()
                     } label: {
                         Text("Changer d'image")
                             .padding(10.0)
                     }
                     .foregroundColor(Color.white)
-                    .background(.blue)
+                    .background(Color("Color1"))
                     .cornerRadius(10)
                     .shadow(radius: 10)
                     
@@ -58,36 +65,53 @@ struct StateBinding: View {
                     Spacer()
                 }
             }
-            .padding(20.0)
+            
+            Spacer()
             
             Divider()
-            // Pricipe du binding
+                .background(.black)
+            
+            Spacer()
+            // Pricipe du Binding
             // Vstack (vue container pour empiler les éléments les uns en dessous des autres)
-            VStack {
+            VStack(spacing: 25.0) {
                 Text("Changement de couleur avec le @Binding")
                     // .modifier instance qui permette de modifier de styliser le text
+                    .font(.title2)
+                    .fontWeight(.medium)
+                
+                Text("Cliquez sur les pastilles pour me voir changer de couleur")
+                    .fontWeight(.semibold)
                     .foregroundColor(textColor)
-                    .font(.largeTitle)
-                    .multilineTextAlignment(.center)
+                    .padding()
+                    .background(.ultraThinMaterial)
+                
+                .cornerRadius(15)
                 
                 HStack {
                     // liaison avec le boutton choix de couleur
                     // la liason est symbolisé le $
+                    Spacer()
                     SousVue(viewColor: .red, selectedColor: $textColor)
-                    SousVue(viewColor: .blue, selectedColor: $textColor)
-                    SousVue(viewColor: .yellow, selectedColor: $textColor)
+                    Spacer()
+                    SousVue(viewColor: Color("Color2"), selectedColor: $textColor)
+                    Spacer()
+                    SousVue(viewColor: Color("Color1"), selectedColor: $textColor)
+                    Spacer()
                     SousVue(viewColor: .green, selectedColor: $textColor)
+                    Spacer()
                 }
             }
-            .padding(20.0)
         }
+        .foregroundColor(.white)
+        .multilineTextAlignment(.center)
+        .padding()
+        .background(Color("AccentColor"))
     }
 }
 
-// Structure d'affichage pour la preview
-struct StateBinding_Previews: PreviewProvider {
+struct StatesAndBinding_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .previewInterfaceOrientation(.portrait)
+        StatesAndBinding()
     }
 }
