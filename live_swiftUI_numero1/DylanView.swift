@@ -17,20 +17,19 @@ struct DylanView: View {
                 Image(systemName: "applelogo")
                     .resizable()
                     .frame(width: 40, height: 45)
-                    .padding(30)
                 Spacer()
                 ZStack {
                     ZStack {
                         Circle()
-                            .stroke(.black.opacity(0.2), lineWidth: 80)
+                            .stroke(.black.opacity(0.2), lineWidth: 8)
                             .frame(width: 260, height: 260, alignment: .center)
                         Circle()
-                            .stroke(.black.opacity(0.2), lineWidth: 20)
+                            .stroke(.black.opacity(0.2), lineWidth: 18)
                             .frame(width: 100, height: 100, alignment: .center)
                     } // ZSTACK
                     Image(systemName: "swift")
                         .resizable()
-                        .frame(width: 240, height: 245, alignment: .center)
+                        .frame(width: 140, height: 145, alignment: .center)
                         .offset(y: animationPencil ? 35 : -35)
                         .animation(
                             Animation
@@ -59,6 +58,7 @@ struct DylanView: View {
                 .cornerRadius(30.0)
                 .shadow(color: Color.black.opacity(0.5), radius: 10, x: 5, y: 5)
             } // VSTACK
+            .padding(45)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(appleColor)
             .onAppear(perform: {
