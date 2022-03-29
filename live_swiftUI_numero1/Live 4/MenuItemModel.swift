@@ -10,20 +10,17 @@ import Foundation
 // déclaration d'une structure
 
 struct MenuItem: Identifiable {
-    let menuTitle:String
     let id = UUID()
+    let menuTitle: String
+    let imageMenus: String
 }
 
-
 extension MenuItem {
-    //  ["Menu","Hamburger","Sauces","Dessert","Boissons","Suppléments"]
-    static let menus : [MenuItem] = [
-        MenuItem(menuTitle: "Menu"),
-        MenuItem(menuTitle: "Hamburger"),
-        MenuItem(menuTitle: "Sauces"),
-        MenuItem(menuTitle: "Desserts"),
-        MenuItem(menuTitle: "Boissons"),
-        MenuItem(menuTitle: "Suppléments")
-    ]
     
+    static let menus : [MenuItem] = [
+        MenuItem(menuTitle: "Apperitif", imageMenus: "appetizer"),
+        MenuItem(menuTitle: "Entrée", imageMenus: "starter"),
+        MenuItem(menuTitle: "Plats", imageMenus: "main"),
+        MenuItem(menuTitle: "Desserts", imageMenus: "dessert")
+    ]
 }
