@@ -43,14 +43,11 @@ struct ContentView: View {
                     Image(systemName: "drop.fill")
                     Text("Dylan")
                 }
-            ListeView()
+            ListeView(menus: MenuItem.menus)
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Liste")
                 }
-          
-
-
         }
     }
 }
