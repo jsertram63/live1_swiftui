@@ -10,14 +10,14 @@ import SwiftUI
 struct StatesAndBinding: View {
     
     // VAR = LECTURE SIMPLE
-    var text = "Je suis une propriété à portée locale dans cette view StantesAndBinding"
+    var text = "Je suis une propriété à portée locale dans cette view Text()"
     // State = LECTURE / ECRITURE
     @State var imageFill = true;
     @State var textColor = Color.black
     
     var body: some View {
         ZStack {
-            Color.accentColor.ignoresSafeArea()
+            Color("Color1").ignoresSafeArea()
             
             VStack(alignment: .center, spacing: 25.0) {
                 VStack(spacing: 25.0) {
@@ -54,7 +54,7 @@ struct StatesAndBinding: View {
                                 .padding(10.0)
                         }
                         .foregroundColor(Color.white)
-                        .background(Color("Color1"))
+                        .background(Color("Color2"))
                         .cornerRadius(10)
                         .shadow(radius: 10)
                         
@@ -66,7 +66,7 @@ struct StatesAndBinding: View {
                             .resizable()
                             // .frame permet de spécifier la taille de l'image.
                             .frame(width: 75.0, height: 75.0)
-                            .foregroundColor(imageFill ? .orange : Color("Color1"))
+                            .foregroundColor(imageFill ? Color("Color3") : Color.accentColor)
                         
                         Spacer()
                     }
@@ -86,7 +86,7 @@ struct StatesAndBinding: View {
                         .font(.title3)
                         .fontWeight(.medium)
                     
-                    Text("Cliquez sur les pastilles pour me voir changer de couleur")
+                    Text("Cliquez sur les pastilles")
                         .fontWeight(.bold)
                         .foregroundColor(textColor)
                         .padding()
@@ -101,9 +101,9 @@ struct StatesAndBinding: View {
                         Spacer()
                         SousVue(viewColor: Color("Color2"), selectedColor: $textColor)
                         Spacer()
-                        SousVue(viewColor: Color("Color1"), selectedColor: $textColor)
+                        SousVue(viewColor: Color.accentColor, selectedColor: $textColor)
                         Spacer()
-                        SousVue(viewColor: .green, selectedColor: $textColor)
+                        SousVue(viewColor: Color("Color1"), selectedColor: $textColor)
                         Spacer()
                     }
                 }

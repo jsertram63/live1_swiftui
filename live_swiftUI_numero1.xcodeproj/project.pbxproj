@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374A49F027F2E8670038342B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A49EF27F2E8670038342B /* MenuView.swift */; };
 		377DB58427E4CDC700F35002 /* StatesAndBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DB58327E4CDC700F35002 /* StatesAndBinding.swift */; };
 		377DB58627E4CF6D00F35002 /* PierricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377DB58527E4CF6D00F35002 /* PierricView.swift */; };
 		377DB58827E4EE4E00F35002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377DB58727E4EE4E00F35002 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374A49EF27F2E8670038342B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		377DB58327E4CDC700F35002 /* StatesAndBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesAndBinding.swift; sourceTree = "<group>"; };
 		377DB58527E4CF6D00F35002 /* PierricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PierricView.swift; sourceTree = "<group>"; };
 		377DB58727E4EE4E00F35002 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				89F5341627EDCA0F0063E2AF /* ListeView.swift */,
 				89F5341827EDD3960063E2AF /* MenuItemModel.swift */,
+				374A49EF27F2E8670038342B /* MenuView.swift */,
 			);
 			path = "Live 4";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				377DB58427E4CDC700F35002 /* StatesAndBinding.swift in Sources */,
 				89F5083927E4A4A500AAE627 /* DylanView.swift in Sources */,
 				89F5341927EDD3960063E2AF /* MenuItemModel.swift in Sources */,
+				374A49F027F2E8670038342B /* MenuView.swift in Sources */,
 				89BFD72D27D21DEC00359EA0 /* live_swiftUI_numero1App.swift in Sources */,
 				8911AF9227DB67130059784D /* SousVue.swift in Sources */,
 				377DB58627E4CF6D00F35002 /* PierricView.swift in Sources */,

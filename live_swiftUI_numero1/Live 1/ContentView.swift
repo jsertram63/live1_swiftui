@@ -23,7 +23,7 @@ struct ContentView: View {
     // initialisation du constructeur
     init() {
         // stylisation de la tabbar
-        UITabBar.appearance().backgroundColor = .systemGray6
+        UITabBar.appearance().backgroundColor = .systemGray4
     }
     
     var body: some View {

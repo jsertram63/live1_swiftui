@@ -17,16 +17,16 @@ struct ListeView: View {
             // Vue container en couche supperposées
             ZStack {
                 // Définition de la couleur d'arrière plan et on ignore la zone de sécurité d'affichage
-                Color.accentColor.ignoresSafeArea()
+                Color("Color2").ignoresSafeArea()
                 // Vue container verticale
                 VStack {
-                    Divider().background(.clear)
+                    Divider().background(Color("Color2"))
                     // Vue liste
                     List {
                         ForEach(menus) { itemMenu in
                             // Liens d'affichage vers d'autres vues
                             NavigationLink(destination: {
-                                // MenuView()
+                                MenuView(menu: itemMenu)
                             }, label: {
                                 HStack(alignment: .center) {
                                     Image(itemMenu.imageMenus)
@@ -37,12 +37,12 @@ struct ListeView: View {
                             })
                             // Titre de la NavigationView
                             .navigationTitle("Menus")
-                            // Permet de changer le style de la NavigationView (.inline, .large
-                            .navigationBarTitleDisplayMode(.automatic)
+                            // Permet de changer le style de la NavigationView (.automatic, .large
+                            .navigationBarTitleDisplayMode(.inline)
                         }
                         // Permet de changer les couleurs d'arrière plan de la liste et du texte
-                        .foregroundColor(Color("Color1"))
-                        .listRowBackground(Color("Color2"))
+                        .foregroundColor(Color.accentColor)
+                        .listRowBackground(Color("Color1").opacity(0.8))
                     }
                     // Permet de changer le style de liste (.automatic, .grouped, .inset, .insetGrouped, .plain
                     .listStyle(.sidebar)

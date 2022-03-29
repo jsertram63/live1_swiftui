@@ -14,7 +14,7 @@ struct PierricView: View {
     
     /* définition de propriétés "property wrapper" d'états pour les vues Picker et Slider */
     // Arrière plan
-    @State var CouleurArrierePlan = Color.accentColor
+    @State var CouleurArrierePlan = Color("Color1")
     // Opacité
     @State var selectedOpacity: Double = 1.0
     
@@ -45,6 +45,7 @@ struct PierricView: View {
                         .font(.title3)
                         .fontWeight(.medium)
                 }
+                .foregroundColor(selectedOpacity < 0.5 ? Color.black : Color.white)
                 .padding()
                 .frame(width: 350.0, height: 225.0)
                 .background(.ultraThinMaterial)
@@ -52,7 +53,7 @@ struct PierricView: View {
                 .shadow(color: .black.opacity(0.5), radius: 15, x: 0, y: 0)
                 .overlay(alignment: .topLeading) {
                     Button {
-                        CouleurArrierePlan = Color.accentColor
+                        CouleurArrierePlan = Color("Color1")
                         selectedOpacity = 1.0
                     } label: {
                         Image(systemName: "arrow.counterclockwise")

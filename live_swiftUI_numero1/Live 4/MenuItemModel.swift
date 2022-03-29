@@ -13,14 +13,16 @@ struct MenuItem: Identifiable {
     let id = UUID()
     let menuTitle: String
     let imageMenus: String
+    let imageMenu: String
+    let descriptionMenu: String
 }
 
 extension MenuItem {
     
     static let menus : [MenuItem] = [
-        MenuItem(menuTitle: "Apperitif", imageMenus: "appetizer"),
-        MenuItem(menuTitle: "Entrée", imageMenus: "starter"),
-        MenuItem(menuTitle: "Plats", imageMenus: "main"),
-        MenuItem(menuTitle: "Desserts", imageMenus: "dessert")
+        MenuItem(menuTitle: "Apperitif", imageMenus: "appetizer", imageMenu: "cocktail", descriptionMenu: "Margarita"),
+        MenuItem(menuTitle: "Entrée", imageMenus: "starter", imageMenu: "coldStarter", descriptionMenu: "Salade composée"),
+        MenuItem(menuTitle: "Plats", imageMenus: "main", imageMenu: "main2", descriptionMenu: "Polochon de viandes"),
+        MenuItem(menuTitle: "Desserts", imageMenus: "dessert", imageMenu: "dessert2", descriptionMenu: "Tiramisu")
     ]
 }

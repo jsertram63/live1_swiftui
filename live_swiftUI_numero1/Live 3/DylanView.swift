@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DylanView: View {
     
-    @State private var appleColor = Color.accentColor
+    @State private var appleColor = Color("Color1")
     @State private var animationPencil: Bool = false
         
         var body: some View {
@@ -60,7 +60,7 @@ struct DylanView: View {
             } // VSTACK
             .padding(45)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(appleColor)
+            .background(appleColor.ignoresSafeArea())
             .onAppear(perform: {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                     animationPencil = true
