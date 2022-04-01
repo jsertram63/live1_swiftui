@@ -9,42 +9,57 @@ import SwiftUI
 
 struct ListeView: View {
     
-    // déclaration de notre tableau de manière implicite (swift déduit que c'est un tableau de String)
-    //var listTextMenu = //["Menu","Hamburger","Sauces","Dessert","Boissons","Suppléments"]
-    
-    let menus : [MenuItem] = [
-        MenuItem(menuTitle: "Menu"),
-        MenuItem(menuTitle: "Hamburger"),
-        MenuItem(menuTitle: "Sauces"),
-        MenuItem(menuTitle: "Desserts"),
-        MenuItem(menuTitle: "Boissons"),
-        MenuItem(menuTitle: "Suppléments")
-    ]
-
-    
+    let menus: [MenusList]
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(menus) { itemMenu in
-                    NavigationLink(destination: {
-                        // code
-                    }, label: {
-                        Text(itemMenu.menuTitle)
-                    })
-                        .navigationTitle("Menu")
-                }
-                    
-                }
-                
-            }
-            
-        }
+            ZStack(alignment: .top) {
+                NavigationView {
+                    ScrollView {
+                        // Une cellule des Burger / Detail
+                            ForEach(menus) { list in
+                                NavigationLink(destination: {
+                                   DetailView(menu: list)
+                                }, label: {
+                                    HStack(spacing: 16) {
+                                        Image(list.image)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 90, height: 95)
+                                            .background(Color.black)
+                                            .cornerRadius(22)
+                                        VStack(alignment: .leading, spacing: 8.0) {
+                                            VStack(alignment: .leading, spacing: 7) {
+                                                Text(list.title)
+                                                    .font(.title2)
+                                                    .foregroundColor(Color.black)
+                                                    .fontWeight(.semibold)
+                                                    .lineLimit(1)
+                                                Text(list.headline)
+                                                    .font(.caption)
+                                                    .foregroundColor(Color.yellow)
+                                                    .lineLimit(1)
+                                            } // VSTACK
+                                            Text(list.description)
+                                                .font(.callout)
+                                                .fontWeight(.light)
+                                                .foregroundColor(.black)
+                                                .lineLimit(2)
+                                        } // VSTACK
+                                        Spacer()
+                                    } // HSTACK
+                                    .padding(8)
+                                }) // LABEL
+                            }
+                    } // SCROLLVIEW
+                    .background(Color.accentColor)
+                    .navigationTitle("My Menus")
+                } // NAVIGATIONVIEW
+        } // ZSTACK
+    }
 }
-        
-       // struct ListeView_Previews: PreviewProvider {
-       //     static var previews: some View {
-       //         ListeView(modelMenu:)
-       //     }
-       // }
-        
+
+struct ListeView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListeView(menus: MenusList.menus)
+    }
+}
