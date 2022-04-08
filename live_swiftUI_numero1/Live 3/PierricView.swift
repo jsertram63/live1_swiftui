@@ -19,6 +19,8 @@ struct PierricView: View {
     @State var selectedOpacity: Double = 1.0
     
     var body: some View {
+        
+        //CouleurArrierePlan.opacity(selectedOpacity).ignoresSafeArea(edges: .bottom)
         ZStack {
             CouleurArrierePlan.opacity(selectedOpacity).ignoresSafeArea()
             VStack(spacing: 100.0) {
@@ -29,8 +31,6 @@ struct PierricView: View {
                     .frame(width: 200.0, height: 200.0)
                     .foregroundColor(colorSwift)
                     .shadow(color: .black, radius: 10, x: 5, y: 5)
-                
-                Spacer()
                 
                 VStack(spacing: 25.0) {
                     
@@ -69,7 +69,7 @@ struct PierricView: View {
                 }
             }
             .foregroundColor(.white)
-            .padding()
+        .padding()
         }
     }
 }
